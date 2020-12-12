@@ -12,15 +12,15 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(trackingPin, INPUT);
   lcd.begin();
-  lcd.setCursor(5, 0); //first column, row #5
+  lcd.setCursor(5, 0); //fifth column, row #1
   lcd.print("Hello!");
-  lcd.setCursor(0, 1); //second column, row #1
+  lcd.setCursor(0, 1); //first column, row #2
   lcd.print("MECHATRONICS:)");
   delay(2000);   //delay of the message
   lcd.clear();   // clear screen
   lcd.setCursor(0, 0); //first column, row #1
   lcd.print("TCRT5000");
-  lcd.setCursor(0, 1); //second column, row #1
+  lcd.setCursor(0, 1); //first column, row #2
   lcd.print("IR Tracking");
   delay(2000); //delay 2000ms
   lcd.clear();
@@ -35,7 +35,7 @@ void loop() {
     noTone(buzzerPin);
     lcd.setCursor(0, 0); //first column, row #1
     lcd.print("Detect:");
-    lcd.setCursor(8, 0); //first column, row #1
+    lcd.setCursor(8, 0); //eight column, row #2
     lcd.print("Black");
   }
   else {
@@ -43,7 +43,7 @@ void loop() {
     Serial.println("Detect: White");
     lcd.setCursor(0, 0); //first column, row #1
     lcd.print("Detect:");
-    lcd.setCursor(8, 0); //first column, row #1
+    lcd.setCursor(8, 0); //eight column, row #2
     lcd.print("White");
     tone(buzzerPin, 1000, 500);
   }
