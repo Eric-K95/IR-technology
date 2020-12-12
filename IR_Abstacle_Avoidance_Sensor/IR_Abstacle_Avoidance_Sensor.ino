@@ -14,15 +14,15 @@ void setup() {
   pinMode(buzzerPin, OUTPUT);
   pinMode(avoidPin, INPUT);
   lcd.begin();
-  lcd.setCursor(5, 0); //first column, row #5
+  lcd.setCursor(5, 0); //sixth column, row #1
   lcd.print("Hello!");
-  lcd.setCursor(0, 1); //second column, row #1
+  lcd.setCursor(0, 1); //first column, row #2
   lcd.print("MECHATRONICS:)");
   delay(2000);   //delay of the message
   lcd.clear();   // clear screen
   lcd.setCursor(0, 0); //first column, row #1
   lcd.print("IR Abstacle");
-  lcd.setCursor(0, 1); //second column, row #1
+  lcd.setCursor(0, 1); //first column, row #2
   lcd.print("Avoidance Sensor");
   delay(2000); //delay 2000ms
   lcd.clear();
@@ -35,7 +35,7 @@ void loop() {
   { Serial.println("Object is detected!!!!!!!");
     lcd.setCursor(0,0); // first coulumn, first low
     lcd.print("State:"); //print the message on LCD screen
-    lcd.setCursor(0,1); // second coulumn, second low
+    lcd.setCursor(0,1); // first coulumn, second low
     lcd.print("ObstacleIsDetected"); //print the message on LCD screen
     digitalWrite(ledPin1, HIGH); //turn on the redLED
     digitalWrite(ledPin2, LOW); //blueLED stays LOW
@@ -46,7 +46,7 @@ void loop() {
     Serial.println("No Obstacle");
     lcd.setCursor(0,0); // first coulumn, first low
     lcd.print("State:"); //print the message on LCD screen
-    lcd.setCursor(2,1); // second coulumn, third low
+    lcd.setCursor(2,1); // third coulumn, second low
     lcd.print("No Obstacle"); //print message on LCD screen
     digitalWrite(ledPin2, HIGH); //turn on the blueLED
     digitalWrite(ledPin1, LOW); //redLED stays LOW
